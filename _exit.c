@@ -12,7 +12,7 @@ void _handle_exit(char **u_tokns, char *line)
 
 	if (u_tokns[1] == NULL || (!_strcmp(u_tokns[1], "0")))
 	{
-		frees_tokns(u_tokns);
+		frees_tokens(u_tokns);
 		free(line);
 		exit(0);
 	}
@@ -31,7 +31,7 @@ void _handle_exit(char **u_tokns, char *line)
 		exit(2);
 	}
 
-	frees_tokens(u_tokens);
+	frees_tokens(u_tokns);
 	free(line);
 	exit(EXIT_SUCCESS);
 }

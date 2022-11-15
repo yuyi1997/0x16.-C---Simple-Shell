@@ -26,14 +26,14 @@ int main(void)
 			break;
 		}
 
-		W_len = count_input(line);
+		w_len = count_input(line);
 		if (line[0] != '\n' && w_len > 0)
 		{
 			u_tokns = tokenize(line, " \t", w_len);
 			execFlag = execBuiltInCommands(u_tokns, line);
 			if (!execFlag)
 			{
-				u_tokns[0] = find(u_tonkns[0]);
+				u_tokns[0] = find(u_tokns[0]);
 				if (u_tokns[0] && access(u_tokns[0], X_OK) == 0)
 					exec(u_tokns[0], u_tokns);
 				else
